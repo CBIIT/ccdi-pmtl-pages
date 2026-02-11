@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting...</title>
+    <script>
+      // SPA redirect for GitHub Pages (project pages)
+      // Keeps BrowserRouter deep-links working on refresh.
+      // Based on the common "spa-github-pages" pattern.
+      (function () {
+        var segmentCount = 1;
+        var l = window.location;
+        l.replace(
+          l.protocol +
+            '//' +
+            l.hostname +
+            (l.port ? ':' + l.port : '') +
+            l.pathname
+              .split('/')
+              .slice(0, 1 + segmentCount)
+              .join('/') +
+            '/?/' +
+            l.pathname
+              .split('/')
+              .slice(1 + segmentCount)
+              .join('/') +
+            l.search +
+            l.hash,
+        );
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
