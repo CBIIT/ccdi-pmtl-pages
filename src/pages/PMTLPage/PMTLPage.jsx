@@ -26,7 +26,7 @@ import { genericComparator } from '../../utils/comparators'
 import config from '../../config';
 
 const { mtpPmtlDocPage } = mtpPageNames;
-const PMTL_DATA_URL = `${config.mtpConfig}/data/pmtl_v3.1.json`;
+const PMTL_DATA_URL = `https://raw.githubusercontent.com/jonkiky/ccdi-pmtl-pages/refs/heads/main/data/pmtl_v3.1.json`;
 
 function getColumns(
   targetSymbolOption,
@@ -210,7 +210,7 @@ class PMTLPage extends Component {
     filteredRows: [],
     pageSize: 25,
     loading: true,
-    fdaPmtlVersion: "",
+    fdaPmtlVersion: "3.1",
   };
   // Generic Function to handle column filtering
   columnFilterHandlerStartsWith = (e, selection, PMTLXf, columnDim) => {
@@ -358,7 +358,7 @@ class PMTLPage extends Component {
         </Typography>
         <br />
         <Typography paragraph>
-          <Link to={mtpPmtlDocPage.url}> Version {fdaPmtlVersion} </Link>
+          <Link to={mtpPmtlDocPage.url}> Version 3.1 </Link>
         </Typography>
         <hr />
         <br />
