@@ -46,15 +46,7 @@ function getColumns(
       label: 'Target Symbol',
       style: { width: '170px', maxWidth: '170px', },
       renderCell: row => {
-        const ensemblID = row.ensemblID;
-        const url = '/target/' + ensemblID;
-        return ensemblID !== 'Symbol_Not_Found' ? (
-          <Link to={url} external>
-            {row.targetSymbol}
-          </Link>
-        ) : (
-          <p> {row.targetSymbol} </p>
-        );
+        return <p>{row.targetSymbol}</p>;
       },
       renderFilter: () => (
         <TextField
