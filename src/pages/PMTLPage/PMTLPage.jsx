@@ -27,6 +27,7 @@ import config from '../../config';
 
 const { mtpPmtlDocPage } = mtpPageNames;
 const PMTL_DATA_URL = `https://raw.githubusercontent.com/CBIIT/ccdi-pmtl-pages/refs/heads/main/data/pmtl_v3.1.json`;
+const baseUrl = (import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL.replace(/\/$/, ''));
 
 function getColumns(
   targetSymbolOption,
@@ -141,7 +142,7 @@ function getColumns(
       tooltip: {
         badgeContent: () => (
           <Lk
-            href={`${mtpPmtlDocPage.url}#mapping-description`}
+            href={`${baseUrl}${mtpPmtlDocPage.url}#mapping-description`}
             title="Explanation of 'Mapping Description' column"
           >
             <FontAwesomeIcon icon={faInfoCircle} size="sm" />
@@ -384,7 +385,7 @@ class PMTLPage extends Component {
           <Box m={2}>
               <>
                 <Lk
-                  href={`${mtpPmtlDocPage.url}#colums-description`}
+                  href={`${baseUrl}${mtpPmtlDocPage.url}#columns-description`}
                   title="FDA PMTL Columns Description"
                 >
                   <FontAwesomeIcon icon={faInfoCircle} size="md" /> Columns
