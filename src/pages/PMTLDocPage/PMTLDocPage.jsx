@@ -397,7 +397,7 @@ function PMTLDocPage() {
             </Typography>
           </Grid>
 
-          <Grid item xs={12} id="colums-description">
+          <Grid item xs={12} id="version">
             <Typography variant="h4" align="center">
               Version
             </Typography>
@@ -421,7 +421,7 @@ function PMTLDocPage() {
             </Typography>
           </Grid>
 
-          <Grid item xs={12} id="colums-description">
+          <Grid item xs={12} id="columns-description">
             <Typography variant="h4" align="center">
               FDA PMTL Columns
             </Typography>
