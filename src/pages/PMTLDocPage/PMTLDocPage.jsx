@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: '45px !important',
   },
   avatar: {
-    color: 'white',
+    color: theme.palette.getContrastText(theme.palette.grey[300]),
     backgroundColor: theme.palette.grey[300],
   },
   avatarHasData: {
