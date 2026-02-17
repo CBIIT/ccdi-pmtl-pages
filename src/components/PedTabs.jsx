@@ -1,14 +1,14 @@
 import { React } from 'react';
 import { Tab, Tabs, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   tabs: {
     '& .MuiTabs-indicator': {
       color: '#5ca300',
     },
     '& .MuiTab-root.Mui-selected': {
       backgroundColor: '#5ca300',
-      color: '#fff',
+      color: theme.palette.getContrastText('#5ca300'),
     },
     '& .MuiTab-textColorInherit': {
       color: '#376100 ',
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     },
     marginBottom: '1rem'
   },
-})
+}))
 
 const PedTabs = ({ value, onChange, tabs, }) => {
   const classes = useStyles();

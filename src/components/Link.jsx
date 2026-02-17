@@ -16,14 +16,14 @@ const styles = theme => ({
     },
   },
   baseTooltip: {
-    color: 'white',
+    color: theme.palette.text.primary,
     '&:hover': {
       color: theme.palette.primary.light,
     },
     textDecoration: 'underline',
   },
   baseFooter: {
-    color: 'white',
+    color: theme.palette.text.primary,
     '&:hover': {
       color: theme.palette.primary.light,
     },
